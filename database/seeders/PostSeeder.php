@@ -22,8 +22,8 @@ class PostSeeder extends Seeder
                 'skateshop.PNG', 'tech.PNG'
             ];
 
-            // Define the correct image path inside storage
-            $storagePath = 'storage/app/public/';
+            // Define the correct publicly accessible path
+            $storagePath = '/'; // Correct public path
 
             Post::factory(10)->create()->each(function ($post) use ($imageNames, $storagePath) {
                 $post->update([
