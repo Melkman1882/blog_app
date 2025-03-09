@@ -1,0 +1,4 @@
+*
+!.gitignore
+!storage/app/public/post_images/
+!storage/app/public/post_images/*
