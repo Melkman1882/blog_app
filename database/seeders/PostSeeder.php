@@ -19,12 +19,15 @@ class PostSeeder extends Seeder
             $imageNames = [
                 'animal.PNG', 'businessnews.PNG', 'coffeeshop.PNG',
                 'gym.PNG', 'holiday.PNG', 'home.PNG',
-                'outdoor.PNG', 'skateshop.PNG', 'tech.PNG', 'techhome.PNG'
+                'skateshop.PNG', 'tech.PNG'
             ];
 
-            Post::factory(10)->create()->each(function ($post) use ($imageNames) {
+            // Define the correct image path inside storage
+            $storagePath = 'storage/app/public/';
+
+            Post::factory(10)->create()->each(function ($post) use ($imageNames, $storagePath) {
                 $post->update([
-                    'image' => 'post_images/' . $imageNames[array_rand($imageNames)]
+                    'image' => $storagePath . $imageNames[array_rand($imageNames)]
                 ]);
             });
         }
