@@ -8,7 +8,7 @@ This is a **Blog Management System** built with Laravel that allows users to cre
 ##  Features
 - User authentication (register, login, logout)
 - Create, edit, and delete blog posts
-- View all blogs or filter by user
+- View all blogs
 - Pagination for better user experience
 - Image upload support for blog posts
 - Confirmation prompt before deleting a post
