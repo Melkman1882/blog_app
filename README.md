@@ -56,7 +56,12 @@ Then run migrations and seed the database:
 php artisan migrate --seed
 ```
 
-### **5. Start the Development Server**
+### **5. Image Upload**
+```sh
+php artisan storage:link
+```
+
+### **6. Start the Development Server**
 ```sh
 php artisan serve
 ```
